@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 1
+        const q1 = document.createElement("div")
+        q1.classList.add("short")
+        
+        const label1 = document.createElement("label")
+        label1.textContent = "Siapa nama Anda?"
+        const inp1 = document.createElement("input")
+        inp1.setAttribute("type", "text")
+        inp1.setAttribute("id", "nama")
+
+        q1.append(label1, inp1)
+        
+        // 2
+        const q2 = document.createElement("div")
+        q2.classList.add("short")
+        
+        const label2 = document.createElement("label")
+        label2.textContent = "Berapa umur Anda?"
+        const inp2 = document.createElement("input")
+        inp2.setAttribute("type", "number")
+        inp2.setAttribute("id", "umur")
+
+        q2.append(label2, inp2)
+
+        // 3
+        const q3 = document.createElement("div")
+        q3.classList.add("radio")
+
+        const label3 = document.createElement("label")
+        label3.textContent = "Apa jenis kelamin Anda?"
+
+        const inp3a = document.createElement("input")
+        inp3a.setAttribute("type", "radio")
+        inp3a.setAttribute("id", "m")
+        const label3a = document.createElement("label")
+        label3a.textContent = "Laki-laki"
+
+        const inp3b = document.createElement("input")
+        inp3b.setAttribute("type", "radio")
+        inp3b.setAttribute("id", "f")
+        const label3b = document.createElement("label")
+        label3b.textContent = "Perempuan"
+
+        q3.append(label3, inp3a, label3a, inp3b, label3b)
+        
+        // 4
+        const q4 = document.createElement("div")
+        q4.classList.add = "radio"
+
+        const label4 = document.createElement("label")
+        label4.textContent = "Apakah Anda perokok?"
+
+        const inp4a = document.createElement("input")
+        inp4a.setAttribute("type", "radio")
+        inp4a.setAttribute("id", "y")
+        const label4a = document.createElement("label")
+        label4a.textContent = "Ya"
+
+        const inp4b = document.createElement("input")
+        inp4b.setAttribute("type", "radio")
+        inp4b.setAttribute("id", "n")
+        const label4b = document.createElement("label")
+        label4b.textContent = "Tidak"
+        
+        q4.append(label4, inp4a, label4a, inp4b, label4b)
+
+        // 5
+        const q5 = document.createElement("div")
+        q5.classList.add("multi")
+        
+        const label5 = document.createElement("label")
+        label5.textContent = "Jika anda perokok, rokok apa yang pernah anda coba?"
+
+        const inp5a = document.createElement("input")
+        inp5a.setAttribute("type", "checkbox")
+        inp5a.setAttribute("id", "gg")
+        const label5a = document.createElement("label")
+        label5a.textContent = "Gudang Garam Filter"
+
+        const inp5b = document.createElement("input")
+        inp5b.setAttribute("type", "checkbox")
+        inp5b.setAttribute("id", "ls")
+        const label5b = document.createElement("label")
+        label5b.textContent = "Lucky Strike"
+        
+        const inp5c = document.createElement("input")
+        inp5c.setAttribute("type", "checkbox")
+        inp5c.setAttribute("id", "mb")
+        const label5c = document.createElement("label")
+        label5c.textContent = "Marlboro"
+        
+        const inp5d = document.createElement("input")
+        inp5d.setAttribute("type", "checkbox")
+        inp5d.setAttribute("id", "es")
+        const label5d = document.createElement("label")
+        label5d.textContent = "Esse"
+
+        q5.append(label5, inp5a, label5a, inp5b, label5b, inp5c, label5c, inp5d, label5d)
+
+        // button submit-reset
+        const b = document.createElement("div")
+        
+        const submit = document.createElement("button")
+        submit.setAttribute("type", "submit")
+        submit.textContent = "Submit"
+        const reset = document.createElement("button")
+        reset.setAttribute("type", "reset")
+        reset.textContent = "Reset"
+
+        b.append(submit, reset)
+
+        const root = document.createElement("div")
+        root.setAttribute("id", "root")
+        const form = document.createElement("form")
+        form.setAttribute("action", "#")
+
+        form.append(q1, q2, q3, q4, q5, b)
+
+        root.append(form)
+        document.querySelector("body").append(root)
+    </script>
+</body>
+</html>
